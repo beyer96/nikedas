@@ -1,0 +1,36 @@
+= form_with(model: product) do |form|
+  - if product.errors.any?
+    div[style="color: red"]
+      h2
+        = pluralize(product.errors.count, "error")
+        |  prohibited this product from being saved:
+      ul
+        - product.errors.each do |error|
+          li
+            = error.full_message
+  div
+    = form.label :name, class: 'd-block'
+    = form.text_area :name
+  div
+    = form.label :description, class: 'd-block'
+    = form.rich_text_area :description
+  div
+    = form.label :price, class: 'd-block'
+    = form.number_field :price
+  div
+    = form.label :manufacturer, class: 'd-block'
+    = form.text_field :manufacturer
+  div
+    = form.label :size, class: 'd-block'
+    = form.text_field :size
+  div
+    = form.label :category, class: 'd-block'
+    = form.text_field :category
+  div
+    = form.label :gender, class: 'd-block'
+    = form.text_field :gender
+  div
+    = form.label :color, class: 'd-block'
+    = form.text_field :color
+  div
+    = form.submit
