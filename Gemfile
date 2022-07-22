@@ -73,6 +73,7 @@ end
 
 
 gem "slim"
+gem 'bootstrap', '~> 5.2'
 gem "devise"
 gem "simple_form"
 gem "city-state"
