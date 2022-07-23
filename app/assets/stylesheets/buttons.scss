@@ -1,0 +1,5 @@
+@import "mixins";
+
+.custom-btn-secondary {
+    @include custom-btn-secondary;
+}

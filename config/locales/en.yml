@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    errors:
+      models:
+        product:
+          error_message: "Could not save the product:"
+          attributes:
+            name:
+              blank: "Product name is missing"
+            price:
+              blank: "Product must have price"
+  products:
+    index:
+      all_products: All products
+      display_product_detail: Show product
+      new_product: New product
+    new:
+      new_product: New product
+      back: Back to products
+    form:
+      name: "Product name: "
+      description: "Description: "
+      price: "Price (CZK): "
+      manufacturer: "Manufacturer: "
+      size: "Size: "
+      category: "Category: "
+      gender: "Gender: "
+      color: "Color: "
+      submit: Create product
+      name_error: Product name missing!
+      price_error: Product price missing!

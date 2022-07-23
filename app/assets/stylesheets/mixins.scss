@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin basic-button {
+    padding: 0.5rem 1rem;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@mixin custom-btn-secondary {
+    @include basic-button;
+    background-color: $tiffany-blue;
+    color: white;
+    border-color: $teal;
+}

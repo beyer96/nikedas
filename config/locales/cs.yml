@@ -1,2 +1,31 @@
 cs:
-  hello: "Ahoj světe!"
+  activerecord:
+    errors:
+      models:
+        product:
+          error_message: "Produkt nemohl být uložen:"
+          attributes:
+            name:
+              blank: "Chybí název produktu"
+            price:
+              blank: "Produkt musí mít zadanou cenu"
+  products:
+    index:
+      all_products: Všechny produkty
+      display_product_detail: Zobrazit produkt
+      new_product: Nový produkt
+    new:
+      new_product: Nový produkt
+      back: Zpět na produkty
+    form:
+      name: "Název produktu: "
+      description: "Popis produktu: "
+      price: "Cena (kč): "
+      manufacturer: "Výrobce: "
+      size: "Velikost: "
+      category: "Kategorie: "
+      gender: "Pohlaví: "
+      color: "Barva: "
+      submit: Vytvořit produkt
+      name_error: Chybí název produktu!
+      price_error: Produkt musí mít zadanou cenu!

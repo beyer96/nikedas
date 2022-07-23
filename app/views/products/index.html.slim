@@ -1,10 +1,22 @@
-p[style="color: green"]
-  = notice
-h1
-  | Products
-#products
-  - @products.each do |product|
-    = render product
-    p
-      = link_to "Show this product", product
-= link_to "New product", new_product_path
+- if notice
+  .alert.alert-dark.p-3.border.border-dark.border-rounded
+    = notice
+
+.container-fluid.text-center
+
+  h1 = t('.all_products')
+
+  .row
+    - @products.each do |product|
+      - 17.times do
+        .col-md-4.mb-3
+          .card id="product_#{product.id}"
+            .card-header
+              h2 = product.name
+            .card-body.bg-custom-secondary
+                = "#{product.description}".html_safe
+
+                h3.text-end = number_to_currency(product.price, locale: :cs, separator: ",", format: "%n %u", unit: "Kč")
+            = link_to t('.display_product_detail'), product, class: 'btn custom-btn-secondary'
+
+  = link_to t('.new_product'), new_product_path, class: 'btn custom-btn-secondary'

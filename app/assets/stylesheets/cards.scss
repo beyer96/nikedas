@@ -1,0 +1,13 @@
+@import "variables";
+
+.card {
+    transition: all 250ms ease-in;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.bg-custom-secondary {
+    background-color: $aero-blue;
+}

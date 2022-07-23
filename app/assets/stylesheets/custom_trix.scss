@@ -1,0 +1,8 @@
+trix-toolbar {
+    max-width: 50%;
+
+    & ~ trix-editor {
+        max-width: 50%;
+        min-height: 200px;
+    }
+}

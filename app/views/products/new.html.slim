@@ -1,6 +1,9 @@
-h1
-  | New product
-= render "form", product: @product
-br
-div
-  = link_to "Back to products", products_path
+.container-fluid
+  .row.px-3.mb-3
+    h1.text-center = t('.new_product')
+    .col
+      = render "form", product: @product
+
+  .row.px-3.mb-3
+    .col
+      = link_to t('.back'), products_path, class: 'btn custom-btn-secondary'
