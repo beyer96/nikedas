@@ -29,7 +29,7 @@
           = f.input :color, label: t('.color'), label_html: { class: 'd-block' }
       .col-md-4
         .mb-3
-          = f.file_field :images, multiple: true, label: t('.photos')
+          = f.file_field :images, multiple: true, label: t('.photos'), class: 'dropzone'
     .row
       .mb-3
         = f.label t('.description'), class: 'mb-2'
