@@ -11,9 +11,11 @@
     .row
       .col-md-4
         .mb-3
-          = f.input :name, label: t('.name'), required: false, error_html: { class: 'd-block error-text' }, label_html: { class: 'd-block' }
+          = f.input :name, label: t('.name'), required: false, error: false, label_html: { class: 'd-block' }
+          = f.error :name, class: 'd-block error-text'
         .mb-3
-          = f.input :price, as: :integer, label: t('.price'), required: false, error_html: { class: 'd-block error-text' }, label_html: { class: 'd-block' }
+          = f.input :price, as: :integer, label: t('.price'), required: false, error: false, label_html: { class: 'd-block' }
+          = f.error :price, class: 'd-block error-text'
         .mb-3
           = f.input :size, label: t('.size'), label_html: { class: 'd-block' }
         .mb-3
@@ -26,11 +28,11 @@
         .mb-3
           = f.input :color, label: t('.color'), label_html: { class: 'd-block' }
       .col-md-4
-        .mb-3.alert.alert-dark
-          = "Tady bude drag & drop na fotky"
+        .mb-3
+          = f.file_field :images, multiple: true, label: t('.photos')
     .row
       .mb-3
         = f.label t('.description'), class: 'mb-2'
         = f.rich_text_area :description
       .mb-3
-        = f.button :submit, t('.submit')
+        = f.button :submit, t('.submit'), class: 'custom-btn-secondary'

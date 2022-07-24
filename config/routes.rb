@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :products
+
+  get "/:locale" => "products#index"
+  scope "(:locale)" do
+    resources :products
+  end
 
 end

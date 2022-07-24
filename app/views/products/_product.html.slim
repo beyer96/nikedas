@@ -33,3 +33,6 @@ p
   strong
     | Color:
   = product.color
+
+- product.images.each do |image|
+  = image_tag(image)

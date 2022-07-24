@@ -9,3 +9,5 @@ pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
 pin "choices.js" # @10.1.0
 pin "mdb-ui-kit" # @4.3.0
+pin "dropzone" # @6.0.0
+pin "just-extend" # @5.1.1
